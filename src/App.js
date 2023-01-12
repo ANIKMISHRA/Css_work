@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import LoginForm from './login_form/Login';
+import Form from './login_signup_form/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Slider from './slider/Slider';
+import Login1 from './login_form_2';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Slider />
     </div>
   );
 }
