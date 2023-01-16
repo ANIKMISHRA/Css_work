@@ -17,11 +17,14 @@ function ReactGoogleLogin() {
 
     const onSuccess = (res) => {
         localStorage.setItem('user', JSON.stringify(res?.profileObj));
-        
+        setProfile(res?.profileObj);
+        console.log("Localstorage:", JSON.parse(localStorage.getItem("user")));
     };
     useEffect(() => {
-        let response = JSON.parse(localStorage.getItem('user'));
-        setProfile(response);
+        console.log("Localstorage:", JSON.parse(localStorage.getItem("users")));
+        if (localStorage.getItem("user")) {
+          setProfile(JSON.parse(localStorage.getItem("user")));
+        }
         }, []);
 
         const { name, googleId, imageUrl, email } = profile || {};
